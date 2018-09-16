@@ -240,20 +240,21 @@
                                                     <div class="row justify-content-center">
 													<div class="col-md-10 ">
                                                             <div class="form-group">
-                                                                <label class="control-label">Username</label>
-                                                                <input class="form-control" type="text" name="first_name"  />
+                                                                <label class="control-label username">Username</label>
+                                                                <input name="username" class="form-control" type="text" name="first_name" required="true" />
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5 ">
                                                             <div class="form-group">
-                                                                <label class="control-label">Password</label>
-                                                                <input class="form-control" type="password" name="first_name"  />
+                                                                <label class="control-label pas">Password</label>
+                                                                <input name="pas" id="password" class="form-control" type="password" name="first_name" required />
                                                             </div>
+                                                            
                                                         </div>
                                                         <div class="col-md-5">
                                                             <div class="form-group">
-                                                                <label class="control-label">Retype password</label>
-                                                                <input class="form-control" type="password" name="last_name" required="true" />
+                                                                <label class="control-label repas">Retype password</label>
+                                                                <input name="" id="confirm_password" class="form-control" type="password" name="last_name" required />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -261,7 +262,7 @@
                                                         <div class="col-md-10">
                                                             <div class="form-group">
                                                                 <label class="control-label">Email
-                                                                    <star>*</star>
+                                                                    
                                                                 </label>
                                                                 <input class="form-control" type="text" name="email" email="true" placeholder="ex: hello@gmail.com" />
                                                             </div>
@@ -290,7 +291,7 @@
                                                             <div class="form-group">
                                                                 <label class="control-label">Gender
                                                                 </label>
-                                                                <select name="cities" class="selectpicker" data-title="Single Select" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">
+                                                                <select class="selectpicker" data-title="Single Select" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">
                                                                     <option value="id">Male</option>
                                                                     <option value="ms">Female</option>
                                                                     <option value="ca">Unknown</option>
@@ -507,6 +508,24 @@
     } catch (err) {
         console.log('Facebook Track Error:', err);
     }
+
+    $("#pas").validate();
+    $("#repas").validate();
+    $("#username").validate();
+
+    var password = document.getElementById("password");
+    var confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
 </script>
 <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
