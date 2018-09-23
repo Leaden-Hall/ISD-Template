@@ -1330,7 +1330,7 @@ demo = {
             swal("Here's a message!");
 
         } else if (type == 'title-and-text') {
-            swal("Here's a message!", "It's pretty, isn't it?")
+            swal("Content", "Offering discounts seems inappropriate for many B2B companies, but you do want to honor your customers and other valued people. Where’s all the advice on celebrating corporate anniversaries specifically tailored to B2B companies? And what if you’d like to do something different this year?")
 
         } else if (type == 'success-message') {
             swal("Good job!", "You clicked the button!", "success")
@@ -1338,7 +1338,7 @@ demo = {
         } else if (type == 'warning-message-and-confirmation') {
             swal({
                 title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                text: "You won't be able to revert this!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonClass: "btn btn-info btn-fill",
@@ -1346,13 +1346,13 @@ demo = {
                 cancelButtonClass: "btn btn-danger btn-fill",
                 closeOnConfirm: false,
             }, function() {
-                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                swal("Deleted!", "This record has been deleted.", "success");
             });
 
         } else if (type == 'warning-message-and-cancel') {
             swal({
                 title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
+                text: "You will not be able to recover this!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonText: "Yes, delete it!",
@@ -1361,9 +1361,9 @@ demo = {
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
-                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                    swal("Deleted!", "This record has been deleted.", "success");
                 } else {
-                    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    swal("Cancelled", "This record file is safe :)", "error");
                 }
             });
 
