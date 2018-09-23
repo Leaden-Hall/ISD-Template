@@ -87,14 +87,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
-}
-.blog-pagination > .btn {
-  border-radius: 2rem;
-}
-
 /*
  * Blog posts
  */
@@ -109,7 +101,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
   color: #999;
 }
-
 /*
  * Footer
  */
@@ -123,3 +114,23 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * New CSS content /////////////////////////////////////////////////////////////////////////////
+ */
+
+ /*
+ * Blog posts
+ */
+ }
+.blog-post-content {
+  text-align: justify;
+}
+
+ /*
+ * Blog events
+ */
+ .blog-event-card {
+  padding: 1.5rem 1.5rem;
+ }
+
