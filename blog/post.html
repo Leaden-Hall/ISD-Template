@@ -138,16 +138,77 @@
           <hr>
             <h5 class="bg-light text-dark p-2 mb-3">Comments</h5>
 
-            <div class="card">
+            <div class="error-message">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-danger">The comment's content is empty</li>
+              </ul>
+            </div>
+
+
+            <div class="card mt-3">
               <div class="card-body">
                 <h5 class="card-title">Username</h5>
                 <h6 class="card-subtitle mb-2 text-muted">5 minutes ago</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="float-right">
-                  <a href="#" class="btn btn-outline-secondary">Edit</a>
-                  <a href="#" class="btn btn-outline-danger">Delete</a>
+
+                <div class="pl-4 child-comment mb-3">
+                  <h6 class="card-subtitle">Username - <span class="text-muted">2 minutes ago</span></h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk </p>
                 </div>
-                <div class="clear-fix"></div>
+
+                <div class="mb-3">
+                  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseReply1" aria-expanded="false" aria-controls="collapseReply1">Reply</button>
+                </div>
+
+                <div class="collapse" id="collapseReply1">
+                  <form>
+                    <div class="form-group row">
+                      <div class="col-10">
+                        <input type="text" name="replyComment" class="form-control">
+                      </div>
+
+                      <div class="col-2">
+                        <button type="submit" class="btn btn-primary">Comment</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Username</h5>
+                <h6 class="card-subtitle mb-2 text-muted">5 minutes ago</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseReply2" aria-expanded="false" aria-controls="collapseReply2">Reply</button>
+                  </div>
+
+                  <div class="col-6 text-right">
+                    <a href="#" class="btn btn-outline-secondary">Edit</a>
+                    <a href="#" class="btn btn-outline-danger" 
+                      onclick="return confirm('Are you certain that you want to delete this comment?');">Delete</a>
+                  </div>
+                </div>
+
+                <div class="collapse" id="collapseReply2">
+                  <form>
+                    <div class="form-group row">
+                      <div class="col-10">
+                        <input type="text" name="replyComment" class="form-control">
+                      </div>
+
+                      <div class="col-2">
+                        <button type="submit" class="btn btn-primary">Comment</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
               </div>
             </div>
 
@@ -158,7 +219,6 @@
             <div class="form-group float-right">
               <button type="submit" class="btn btn-primary"><b>Comment</b></button>
             </div>
-            <div class="clear-fix"></div>
           </form>
 
         </section><!-- /.blog-main -->
@@ -244,9 +304,10 @@
           </div>
 
           <div class="p-3">
-            <button type="button" class="btn btn-danger btn-lg btn-block">
+            <a href="#" class="btn btn-danger btn-lg btn-block" 
+            onclick="return confirm('Are you certain that you want to delete this post?');">
               Delete This Post
-            </button>
+            </a>
           </div>
         </aside><!-- /.blog-sidebar -->
 

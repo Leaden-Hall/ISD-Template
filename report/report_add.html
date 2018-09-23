@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-<!--     <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"> -->
+    <link rel="icon" href="">
 
-    <title>Account Change Password</title>
+    <title>Report Add</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,10 @@
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
          <div class="col-4 pt-1">
-            <a class="text-muted" href="#">VietPoiter</a>
+            <a class="text-muted" href="#">
+              <!-- <img src="../assets/VietPointer_logo_white.png" class="img-fluid" alt="VietPointer_logo"> -->
+              Vietpointer
+            </a>
           </div>
 
           <div class="col-4 text-center">
@@ -87,59 +90,72 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
-          <h2 class="pb-3 mb-4 font-italic border-bottom">
-            Change Password
+          <h2 class="pb-2 mb-2 font-italic border-bottom">
+            Your Reports
           </h2>
 
-          <div class="error-message">
+          <div class="error-message mt-5">
             <ul class="list-group">
-              <li class="list-group-item list-group-item-danger">Old Passowrd field is required</li>
-              <li class="list-group-item list-group-item-danger">New Password is required</li>
-              <li class="list-group-item list-group-item-danger">Confirm New Password field is required</li>
-              <li class="list-group-item list-group-item-danger">Old Password is not correct</li>
-              <li class="list-group-item list-group-item-danger">Passowrd confirmation does not matach</li>
+              <li class="list-group-item list-group-item-danger">You have to specify the reason for this report</li>
             </ul>
           </div>
 
-          <div class="alert alert-success p-3 mt-2">
-            Your account password has been updated successfully.
-          </div> 
-
           <div class="mt-5">
-            <form class="p-3">
+            <h3>Report of user violation</h3>
+            <form class="bg-light p-3">
               <div class="form-group row">
-                <label for="oldPass" class="col-sm-4 col-form-label">Old Password</label>
-                <div class="col-sm-8">
-                  <input type="password" class="form-control" id="oldPass" placeholder="Old Password">
+                <label for="report-username" class="col-sm-2 col-form-label"><b>Username</b></label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" id="report-username" value="Username">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="newPass" class="col-sm-4 col-form-label">New Password</label>
-                <div class="col-sm-8">
-                  <input type="password" class="form-control" id="newPass" placeholder="New Password">
+                <label for="report-content" class="col-sm-2 col-form-label"><b>Reason</b></label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="report-content" rows="5"></textarea>
                 </div>
               </div>
 
-              <div class="form-group row">
-                <label for="confirmPass" class="col-sm-4 col-form-label">Confirm New Password</label>
-                <div class="col-sm-8">
-                  <input type="password" class="form-control" id="confirmPass" placeholder="Confirm Password">
-                </div>
+              <div class="form-group text-right">
+                <button type="submit" class="btn btn-success">Submit</button>
               </div>
-
-              <div class="form-group text-right mt-5">
-                <button type="submit" class="btn btn-primary">Change</button>
-              </div>
-
             </form>
           </div>
 
+          <div class="mt-5">
+            <h3>Report of blog post violation</h3>
+            <form class="bg-light p-3">
+              <div class="form-group row">
+                <label for="report-post-title" class="col-sm-2 col-form-label"><b>Post Title</b></label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" id="report-post-title" value="Post title">
+                </div>
+              </div>
 
+              <div class="form-group row">
+                <label for="report-post-author" class="col-sm-2 col-form-label"><b>Author</b></label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" id="report-post-author" value="Post author username">
+                </div>
+              </div>
 
+              <div class="form-group row">
+                <label for="report-content" class="col-sm-2 col-form-label"><b>Reason</b></label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="report-content" rows="5"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group text-right">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
+          </div>
         </div><!-- /.blog-main -->
 
         <aside class="col-md-4 blog-sidebar">
+          
           <div class="p-3 mb-3 bg-light rounded">
             <div class="mb-4">
               <h4 class="font-italic">
@@ -200,7 +216,6 @@
               <li><a href="#">Facebook</a></li>
             </ol>
           </div>
-
         </aside><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
